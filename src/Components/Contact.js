@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Contact extends Component {
-  render() {
+const Contact = ({data, climbs}) => {
+   const handleChange = (e) => {
+      e.target.value = 'Sorry, this feature is not set up yet'
+   }
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var street = this.props.data.address.street;
-      var city = this.props.data.address.city;
-      var state = this.props.data.address.state;
-      var zip = this.props.data.address.zip;
-      var phone= this.props.data.phone;
-      var email = this.props.data.email;
-      var message = this.props.data.contactmessage;
-    }
+   if (!data || !climbs) {
+      return(
+         <section id="contact"></section>
+      )
+   }
+
+   let message = data.contactmessage;
+   let climbCards = climbs.items
+     ? climbs.items.slice(0, 4).map((climb, i) => (
+         <li key={climb.title + i}>
+           <b>
+             <a href={climb.link} target="blank">
+               <p style={{marginBottom: 0}}>{climb.title.replace('Tick: ', '')}</p>
+             </a>
+           </b>
+           <span>{climb.contentSnippet.substring(0, 200) + "..."}</span>
+           <p>{climb.pubDate.substring(0, 16)}</p>
+         </li>
+       ))
+     : [];
 
     return (
       <section id="contact">
@@ -41,17 +53,17 @@ class Contact extends Component {
 
                   <div>
 						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={handleChange}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={handleChange}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={handleChange}/>
                   </div>
 
                   <div>
@@ -76,43 +88,16 @@ class Contact extends Component {
 
 
             <aside className="four columns footer-widgets">
-               <div className="widget widget_contact">
-
-					   <h4>Address and Phone</h4>
-					   <p className="address">
-						   {name}<br />
-						   {street} <br />
-						   {city}, {state} {zip}<br />
-						   <span>{phone}</span>
-					   </p>
-				   </div>
-
                <div className="widget widget_tweets">
-                  <h4 className="widget-title">Latest Tweets</h4>
+                  <h4 className="widget-title">Latest Climbs</h4>
                   <ul id="twitter">
-                     <li>
-                        <span>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                     </li>
-                     <li>
-                        <span>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                     </li>
+                     {climbCards}
                   </ul>
 		         </div>
             </aside>
       </div>
    </section>
     );
-  }
 }
 
 export default Contact;

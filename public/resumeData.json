@@ -3,44 +3,43 @@
     "name":"Jeremiah Tabb",
     "description":"Software engineer, data scientist, composer",
     "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "bio":"I solve complex problems creatively. As a software engineer with a background in music composition, I have years of experience thinking outside of the box to implement technical solutions in environments that prioritize results. I am obsessed with learning, and strive to achieve the simplicity that comes through thorough understanding - be that in music or code.",
+    "contactmessage":"Contact me here!",
+    "email": "tabbjeremiah@gmail.com",
+    "github":"https://github.com/jollyjerr",
+    "project":"https://www.linkedin.com/in/jeremiahtabb/",
     "address":{
       "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
+      "city":"Boulder",
+      "state":"Colorado",
       "zip": "(Your Zip/Postal Code)"
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
+    "website": "http://www.jeremiahtabb.dev",
+    "resumedownload":"https://drive.google.com/file/d/1zwKq59CRYwrip2ExyicfqG165mbFsegh/view?usp=sharing",
     "social":[
       {
         "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://www.facebook.com/jeremiah.tabb.5",
         "className":"fa fa-facebook"
       },
       {
         "name":"twitter",
-        "url":"http://twitter.com",
+        "url":"https://twitter.com/JerrTabb",
         "className":"fa fa-twitter"
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
+        "url":"https://www.linkedin.com/in/jeremiahtabb/",
         "className":"fa fa-linkedin"
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
+        "url":"https://www.instagram.com/jollyjerr/",
         "className":"fa fa-instagram"
       },
       {
         "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://github.com/jollyjerr",
         "className":"fa fa-github"
       }
     ]
@@ -49,30 +48,30 @@
     "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2007",
+        "school":"The Flatiron School",
+        "degree":"Full-Stack Software Engineering",
+        "graduated":"October 2019",
         "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
       },
       {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2003",
+        "school":"Indiana Wesleyan University",
+        "degree":"Music Theory and Composition",
+        "graduated":"April 2019",
         "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
       }
     ],
     "work":[
       {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2010 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company":"MedIntel Corp",
+        "title":"Data Architect",
+        "years":"Dec 2019 - Present",
+        "description":"Computational linguistics for parsing medical ORU's and extracting known/incidental cancer findings, full-stack web development with React/Flask for internal medical applications and data visualizations."
       },
       {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2007 - February 2010",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company":"Strabo Partners",
+        "title":"Software Developer",
+        "years":"Dec 2019 - Present",
+        "description":"Engineering Microsoft Dynamics 365 solutions and building Vue apps as the lead web developer."
       }
     ]
   },
