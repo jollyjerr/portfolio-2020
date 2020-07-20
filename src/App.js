@@ -7,14 +7,19 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import Parser from 'rss-parser';
 // import Portfolio from './Components/Portfolio';
 import ReactGA from 'react-ga';
 import Resume from './Components/Resume';
 
+// eslint-disable-next-line
+const RSSParser = require('rss-parser/dist/rss-parser.min.js');
+
+
+// eslint-disable-next-lin
+let parser = new RSSParser();
+
 const App = (_props) => {
   const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-  const parser = new Parser();
   const [climbs, setClimbs] = useState([]);
   const [resumeData, setResumeData] = useState({})
 
